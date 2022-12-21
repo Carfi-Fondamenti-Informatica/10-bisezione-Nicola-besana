@@ -5,12 +5,12 @@ using namespace std;
 float f(float y) {
 
     float x=0;
-    x = pow(y,2)*cos(y)+1;
+    x = (y*y)*cos(y)+1;
     return x;
 }
 
 int main() {
-    float a = 0, b = 0, x = 0, err = 1;
+    float a = 0, b = 0, x = 0, err = 1,m=0;
     do {
         cout << "Inserire gli estremi:";
         cin >> a;
@@ -30,8 +30,9 @@ while(f(x) !=0) {
         break;
     }
 }
-
-
-    cout << int(x*10000)/10000.0<<endl;
+    x=x*10000;
+    x=(int)x;
+    x=x/10000;
+    cout<< x;
     return 0;
 }
